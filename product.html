@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <nav id="row">
+            <div>
+                <img src="pashzone_logo.png" alt="logo" id="logo">
+            </div>
+            <div>
+                <ul>
+                    <div>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </div>
+                    <div>
+
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="index.html">Contact Us</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="right">
+                <!-- <input type="submit" value="login" href="login.html"> -->
+                <button id="op" onclick="hide()">
+                    <img src="cart.png" alt="cart" id="cart">
+                </button>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="cartpop" id="pop">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <!-- <button id="cl" onclick=""></button> -->
+            <!-- <i class="open" id="op">O</i> -->
+            <!-- <i class="close" id="cl">X</i> -->
+        </label>
+        <h5>Total number of orders: </h5>
+        <div>
+            <div class="orders">
+                <div>
+                    <img src="4.jpg" alt="img">
+                    <div>
+                        <h4>Product Name</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, accusantium.</p>
+                    </div>
+                </div>
+                <p>Price: ____</p>
+            </div>
+            <div class="orders">
+                <div>
+                    <img src="4.jpg" alt="img">
+                    <div>
+                        <h4>Product Name</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, accusantium.</p>
+                    </div>
+                </div>
+                <p>Price: ____</p>
+            </div>
+        </div>
+        <input type="submit" value="ORDER NOW">
+        </div>
+
+    <div id="product_main">
+        <div>
+
+            <div>
+                <img src="3.jpg" alt="">
+            </div>
+            <div>
+                <h1>T-Shirt</h1>
+                <ul id="product_info">
+                    <li>Color: Red</li>
+                    <li>Quality: Best</li>
+                    <li>blablabla</li>
+                    <li>blablabla</li>
+                </ul>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function hide(){
+            let op=document.getElementById('op');
+            let pop=document.getElementById('pop');
+            if(pop.style.display!='none'){
+                pop.style.display='none';
+            }
+            else{
+                pop.style.display='block';
+            }
+        }
+    </script>
+
+</body>
+</html>

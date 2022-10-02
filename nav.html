@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+        
+body{
+    margin: 0px 0px;
+    background-color: rgb(255, 228, 198);
+    /* background: url("iim.jpg") repeat center center/cover;
+    width: 100vw;
+    height: 100vh; */
+   
+}
+.navbar{
+    position: relative;
+}
+body::before
+/* , .contact::before, .aboutus::before */
+{
+    background: url("iim.jpg") no-repeat center center/cover;
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 800px;
+    z-index: -3;
+    opacity: 0.4;
+   
+} 
+
+#logo{
+    width: 60px;
+    height: 60px;
+    padding: 10px 10px;
+    /* background-color: brown; */
+}
+.right{
+    display: flex;
+    right: 0px;
+    position: absolute;
+    margin: 10px;
+}
+.right>a{
+    background-color: white;
+    border: 2px solid rgb(119, 64, 64);
+    margin: 15px;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    border-radius: 5px;
+}
+.right>a:hover{
+    background-color: rgb(247, 234, 218);
+}
+#cart{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+
+}
+#cart:hover{
+    opacity: 0.6;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+ 
+}
+#row{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    margin: 0px 0px;
+    /* box-shadow: 2px 2px 20px 1px rgb(71, 13, 13); */
+   
+}
+#row div ul{
+    margin-top: 30px;
+    list-style-type: none;
+    display: flex;
+}
+#row>div>ul>div{
+    display: flex;
+}
+#row div ul li a{
+    
+   padding: 20px 30px;
+   font-size: 1.3rem;
+   transition: all 0.25s ease-in-out;
+   font-weight: bold;
+   text-decoration: none; 
+   color: rgb(53, 11, 11);
+}
+#row div ul li a:hover{
+    background-color: rgb(244, 240, 240);
+    color: brown;
+    border-radius: 10px;
+}
+#op{
+    background-color: white;
+    border: none;
+}
+
+
+.cartpop{
+    width: 300px;
+    height: 100vh;
+    /* right: -400px; */
+    right: 0px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    /* padding-top: 50px; */
+    padding: 40px 25px;
+    display: none;
+    box-shadow: 0px 0px 1px black;
+    
+}
+.cartpop>h5{
+    margin-top: 10px;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    color: rgb(101, 71, 71);
+
+}
+.orders>div>img{
+    width: 70px;
+    height: 100px;
+    margin: 10px;
+}
+.orders{
+    border: 2px solid rgb(220, 186, 186);
+    margin: 10px;
+}
+.orders:hover{
+    background-color: rgba(252, 237, 225, 0.651);
+}
+.orders>div{
+    display: flex;
+
+    align-items: center;
+    /* border: 2px solid rgb(220, 186, 186); */
+    padding: 10px;
+    height: 120px
+}
+.orders>p{
+    display: flex;
+    justify-content: center;    
+    margin: 0;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.767);
+}
+.orders>div>div{
+    display: flex;
+    flex-direction: column;
+}
+.orders>div>div>h4, .orders>div>div>p{
+    margin: 5px;
+}
+.orders>div>div>p{
+    font-size: 14px;
+}
+.cartpop>div{
+    margin-bottom: 30px;
+}
+.cartpop input[type=submit]{
+    background-color: rgb(120, 80, 80);
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    display: block;    
+    margin: auto;
+
+}
+#check{
+    display: none;
+}
+label #op, label #cl{
+    position: absolute;
+}
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <nav id="row">
+            <div>
+                <img src="pashzone_logo.png" alt="logo" id="logo">
+            </div>
+            <div>
+                <ul>
+                    <div>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </div>
+                    <div>
+
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="index.html">Contact Us</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="right">
+                <!-- <input type="submit" value="login" href="login.html"> -->
+                <button id="op" onclick="hide()">
+                    <img src="cart.png" alt="cart" id="cart">
+                </button>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </div>
+    <div class="cartpop" id="pop">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <!-- <button id="cl" onclick=""></button> -->
+            <!-- <i class="open" id="op">O</i> -->
+            <!-- <i class="close" id="cl">X</i> -->
+        </label>
+        <h5>Total number of orders: </h5>
+        <div>
+            <div class="orders">
+                <div>
+                    <img src="4.jpg" alt="img">
+                    <div>
+                        <h4>Product Name</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, accusantium.</p>
+                    </div>
+                </div>
+                <p>Price: ____</p>
+            </div>
+            <div class="orders">
+                <div>
+                    <img src="4.jpg" alt="img">
+                    <div>
+                        <h4>Product Name</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, accusantium.</p>
+                    </div>
+                </div>
+                <p>Price: ____</p>
+            </div>
+        </div>
+        <input type="submit" value="ORDER NOW">
+
+    </div>
+
+    <script>
+        function hide(){
+            let op=document.getElementById('op');
+            let pop=document.getElementById('pop');
+            if(pop.style.display!='none'){
+                pop.style.display='none';
+            }
+            else{
+                pop.style.display='block';
+            }
+        }
+    </script>
+</body>
+</html>

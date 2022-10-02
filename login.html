@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="navbar">
+
+        <nav id="row">
+            <div>
+                <img src="pashzone_logo.png" alt="logo" id="logo">
+            </div>
+            <div>
+                <ul>
+                    <div>
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </div>
+                    <div>
+
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="index.html">Contact Us</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="right">
+                <!-- <input type="submit" value="login" href="login.html"> -->
+                <button id="op" onclick="hide()">
+                    <img src="cart.png" alt="cart" id="cart">
+                </button>
+              
+            </div>
+        </nav>
+    </div>
+
+    <div class="cartpop" id="pop">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <!-- <button id="cl" onclick=""></button> -->
+            <!-- <i class="open" id="op">O</i> -->
+            <!-- <i class="close" id="cl">X</i> -->
+        </label>
+        <h5>Total number of orders: </h5>
+        <div>
+            <div class="orders">
+                <div>
+                    <img src="4.jpg" alt="img">
+                    <div>
+                        <h4>Product Name</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, accusantium.</p>
+                    </div>
+                </div>
+                <p>Price: ____</p>
+            </div>
+            <div class="orders">
+                <div>
+                    <img src="4.jpg" alt="img">
+                    <div>
+                        <h4>Product Name</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, accusantium.</p>
+                    </div>
+                </div>
+                <p>Price: ____</p>
+            </div>
+        </div>
+        <input type="submit" value="ORDER NOW">
+        </div>
+
+    <div class="contact_page">
+            <form action="">
+                <div class="section">
+                    <h2>Already having Account? <p class="loginnow">Login Now</p></h2>
+                    <p class="mail">E-mail/Phone: <input type="text" name="name" required></p>
+                    <p>
+                        <a href="profile.html" class="inputt">LOGIN</a>
+                        <!-- <input type="submit" name="login" value="Login"> -->
+                    </p>
+                </div>
+                <div class="or">
+                     <div> <p>OR</p> </div>
+                </div>
+                <div class="section">
+                    <h2>Sign in with</h2>
+                    <!-- <div class="text">(Facebook login is only for accounts created using Email ID)</div> -->
+                    <div>
+                        <a href="www.facebook.com">
+                            <img class="sociall" src="f.png" alt="facebook">
+                        </a>
+                        <a href="www.facebook.com">
+                            <img class="sociall" src="g.png" alt="google">
+                        </a>
+                    </div>
+                    <div class="register">
+                        <p>
+                            Don't have an account? 
+                        </p>
+                        <a href="profile.html" class="inputt">
+                            REGISTER
+                            <!-- <input type="submit" value="register"> -->
+                        </a>
+                        </div>
+                </div>
+            </form>
+    </div>
+
+    <script>
+        function hide(){
+            let op=document.getElementById('op');
+            let pop=document.getElementById('pop');
+            if(pop.style.display!='none'){
+                pop.style.display='none';
+            }
+            else{
+                pop.style.display='block';
+            }
+        }
+    </script>
+</body>
+</html>
