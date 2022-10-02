@@ -1,11 +1,10 @@
 #row{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    /* justify-content: center; */
 }
 #row img{
-    display: block;
-    margin: auto;
+    margin-left: 10px;
 }
 #row>div>ul>div{
     display: flex;
@@ -14,10 +13,60 @@
 #row div ul{
     display: flex;
     justify-content: space-around;
+    display: none;
 }
 #row div ul li a{
     padding: 7px 15px;
     font-size: 1.3rem;
+}
+.left_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left_icon>button{
+    background-color: white;
+    border: none;
+}
+.popups{
+    display: inline;
+    background-color: antiquewhite;
+    width: 20px;
+    height: 20px;
+}
+#menu_popup{
+    display: inline;
+}
+#menupopup{
+    width: 300px;
+    height: 100vh;
+    /* right: -400px; */
+    left: 0px;
+    position: fixed;
+    background-color: rgb(87, 29, 29);
+    /* padding-top: 50px; */
+    padding: 40px 25px;
+    display: none;
+    box-shadow: 0px 0px 1px black;
+
+}
+#menupopup>ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+#menupopup>ul>li>a{
+    text-decoration: none;
+    color: white;
+   
+}
+#menupopup>ul>li{
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.157);
+}
+#menupopup>ul>li>a:hover{
+    color: yellow;
 }
 #mid{
     height: 2000px;
@@ -75,6 +124,12 @@
 .founders img{
     width: 150px;
     height: 150px;
+}
+.founders>h2{
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 
 .webdeveloper h3{

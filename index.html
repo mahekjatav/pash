@@ -13,9 +13,16 @@
 <body>
     <div class="navbar">
         <nav id="row">
-            <div>
-                <img src="pashzone_logo.png" alt="logo" id="logo">
+            
+            <div class="left_icon">
+                
+                <button id="menu_popup" onclick="menu_show()">
+
+                    <img src="popup.png" alt="" class="llogo popups">
+                </button>
+                <img src="pashzone_logo.png" alt="logo" class="llogo">
             </div>
+           
             <div>
                 <ul>
                     <div>
@@ -36,12 +43,27 @@
                 <button id="op" onclick="hide()">
                     <img src="cart.png" alt="cart" id="cart">
                 </button>
+                <div>0
+                </div>
                 <a href="login.html">Login</a>
             </div>
         </nav>
     </div>
 
+    <div id="menupopup">
+        <ul>
+            <li><a href="">#pashzone</a></li>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">GALLERY</a></li>
+            <li><a href="">PRODUCTS</a></li>
+            <li><a href="">SERVICES</a></li>
+            <li><a href="">CONTACT US</a></li>
+        </ul>
 
+    </div>
+
+    </div>
     <div class="cartpop" id="pop">
         <input type="checkbox" id="check">
         <label for="check">
@@ -193,6 +215,17 @@
             else{
                 pop.style.display='block';
             }
+        }
+        function menu_show(){
+           
+            let menupopup=document.getElementById('menupopup')
+            if(menupopup.style.display!='none'){
+                menupopup.style.display='none';
+            }
+            else{
+                menupopup.style.display='block';
+            }
+            
         }
     </script>
 </body>

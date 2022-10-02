@@ -24,8 +24,10 @@ body::before
     opacity: 0.4;
    
 } 
-
-#logo{
+#menu_popup,#menupopup{
+    display: none;
+}
+.llogo{
     width: 60px;
     height: 60px;
     padding: 10px 10px;
@@ -59,6 +61,15 @@ body::before
 #cart:hover{
     opacity: 0.6;
 }
+.right>div{
+    background-color: red;
+    border-radius: 100%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    color: white;
+    margin-left: -20px;
+}
 .navbar{
     position: fixed;
     top: 0;
@@ -73,6 +84,8 @@ body::before
     /* box-shadow: 2px 2px 20px 1px rgb(71, 13, 13); */
    
 }
+
+
 #row div ul{
     margin-top: 30px;
     list-style-type: none;
